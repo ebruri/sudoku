@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Sudoku Checker</title>
+</head>
+<body>
+  <div class="container">
+      <table id="sudoku" class="mt-5">
+        <tbody>
+          <tr id="row1">
+            <td><input maxlength="1" value="5" type="text" class="row1"/></td>
+            <td><input maxlength="1" value="3" type="text" class="row1"/></td>
+            <td><input maxlength="1" type="text" class="row1"/></td>
+            <td><input maxlength="1" type="text" class="row1"/></td>
+            <td><input maxlength="1" value="7" type="text" class="row1"/></td>
+            <td><input maxlength="1" type="text" class="row1"/></td>
+            <td><input maxlength="1" type="text" class="row1"/></td>
+            <td><input maxlength="1" type="text" class="row1"/></td>
+            <td><input maxlength="1" type="text" class="row1"/></td>
+          </tr>
+          <tr>
+            <td><input maxlength="1" value="6" type="text" class="row2"/></td>
+            <td><input maxlength="1" type="text" class="row2"/></td>
+            <td><input maxlength="1" type="text" class="row2"/></td>
+            <td><input maxlength="1" value="1" type="text" class="row2"/></td>
+            <td><input maxlength="1" value="9" type="text" class="row2"/></td>
+            <td><input maxlength="1" value="5" type="text" class="row2"/></td>
+            <td><input maxlength="1" type="text" class="row2"/></td>
+            <td><input maxlength="1" type="text" class="row2"/></td>
+            <td><input maxlength="1" type="text" class="row2"/></td>
+          </tr>
+          <tr>
+            <td><input maxlength="1" type="text" class="row3"/></td>
+            <td><input maxlength="1" value="9" type="text" class="row3"/></td>
+            <td><input maxlength="1" value="8" type="text" class="row3"/></td>
+            <td><input maxlength="1" type="text" class="row3"/></td>
+            <td><input maxlength="1" type="text" class="row3"/></td>
+            <td><input maxlength="1" type="text" class="row3"/></td>
+            <td><input maxlength="1" type="text" class="row3"/></td>
+            <td><input maxlength="1" value="6" type="text" class="row3"/></td>
+            <td><input maxlength="1" type="text" class="row3"/></td>
+          </tr>
+          <tr id="row4">
+            <td><input maxlength="1" value="8" type="text" class="row4"/></td>
+            <td><input maxlength="1" type="text" class="row4"/></td>
+            <td><input maxlength="1" type="text" class="row4"/></td>
+            <td><input maxlength="1" type="text" class="row4"/></td>
+            <td><input maxlength="1" value="6" type="text" class="row4"/></td>
+            <td><input maxlength="1" type="text" class="row4"/></td>
+            <td><input maxlength="1" type="text" class="row4"/></td>
+            <td><input maxlength="1" type="text" class="row4"/></td>
+            <td><input maxlength="1" value="3" type="text" class="row4"/></td>
+          </tr>
+          <tr id="row5">
+            <td><input maxlength="1" value="4" type="text" class="row5"/></td>
+            <td><input maxlength="1" type="text" class="row5"/></td>
+            <td><input maxlength="1" type="text" class="row5"/></td>
+            <td><input maxlength="1" value="8" type="text" class="row5"/></td>
+            <td><input maxlength="1" type="text" class="row5"/></td>
+            <td><input maxlength="1" value="3" type="text" class="row5"/></td>
+            <td><input maxlength="1" type="text" class="row5"/></td>
+            <td><input maxlength="1" type="text" class="row5"/></td>
+            <td><input maxlength="1" value="1" type="text" class="row5"/></td>
+          </tr>
+          <tr id="row6">
+            <td><input maxlength="1" value="7" type="text" class="row6"/></td>
+            <td><input maxlength="1" type="text" class="row6"/></td>
+            <td><input maxlength="1" type="text" class="row6"/></td>
+            <td><input maxlength="1" type="text" class="row6"/></td>
+            <td><input maxlength="1" value="2" type="text" class="row6"/></td>
+            <td><input maxlength="1" type="text" class="row6"/></td>
+            <td><input maxlength="1" type="text" class="row6"/></td>
+            <td><input maxlength="1" type="text" class="row6"/></td>
+            <td><input maxlength="1" value="6" type="text" class="row6"/></td>
+          </tr>
+          <tr id="row7">
+            <td><input maxlength="1" type="text" class="row7"/></td>
+            <td><input maxlength="1" value="6" type="text" class="row7"/></td>
+            <td><input maxlength="1" type="text" class="row7"/></td>
+            <td><input maxlength="1" type="text" class="row7"/></td>
+            <td><input maxlength="1" type="text" class="row7"/></td>
+            <td><input maxlength="1" type="text" class="row7"/></td>
+            <td><input maxlength="1" value="2" type="text" class="row7"/></td>
+            <td><input maxlength="1" value="8" type="text" class="row7"/></td>
+            <td><input maxlength="1" type="text" class="row7"/></td>
+          </tr>
+          <tr id="row8">
+            <td><input maxlength="1" type="text" class="row8"/></td>
+            <td><input maxlength="1" type="text" class="row8"/></td>
+            <td><input maxlength="1" type="text" class="row8"/></td>
+            <td><input maxlength="1" value="4" type="text" class="row8"/></td>
+            <td><input maxlength="1" value="1" type="text" class="row8"/></td>
+            <td><input maxlength="1" value="9" type="text" class="row8"/></td>
+            <td><input maxlength="1" type="text" class="row8"/></td>
+            <td><input maxlength="1" type="text" class="row8"/></td>
+            <td><input maxlength="1" value="5" type="text" class="row8"/></td>
+          </tr>
+          <tr id="row9">
+            <td><input maxlength="1" type="text" class="row9"/></td>
+            <td><input maxlength="1" type="text" class="row9"/></td>
+            <td><input maxlength="1" type="text" class="row9"/></td>
+            <td><input maxlength="1" type="text" class="row9"/></td>
+            <td><input maxlength="1" value="8" type="text" class="row9"/></td>
+            <td><input maxlength="1" type="text" class="row9"/></td>
+            <td><input maxlength="1" type="text" class="row9"/></td>
+            <td><input maxlength="1" value="7" type="text" class="row9"/></td>
+            <td><input maxlength="1" value="9" type="text" class="row9"/></td>
+          </tr>
+        </tbody>
+      </table> 
+    <button id="submit" class="btn btn-primary">Submit</button> 
+  </div>
+</body>
+</html>
+
+
+
+
+  

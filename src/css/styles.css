@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(185, 185, 221);
+}
+
+#sudoku-container {
+  margin: 0, auto;
+}
+
+input {
+  max-width: 29px;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}

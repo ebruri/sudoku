@@ -1,5 +1,6 @@
-class Sudoku {
-  constructor(row1, row2, row3, row4, row5, row6, row7, row8, row9) {
+export default class Sudoku {
+  constructor(row1, row2, row3, row4, row5, row6, row7, row8, row9
+  ) {
     this.row1 = row1;
     this.row2 = row2;
     this.row3 = row3;
@@ -10,27 +11,40 @@ class Sudoku {
     this.row8 = row8;
     this.row9 = row9;
   }
-  
-  checkSudoku() {
-     
+
+  checkRows() {
+    let passingRows = 0;
+    Object.values(this).forEach(function(row) {
+      if (new Set(row).size === row.length) {
+        passingRows ++;
+      } 
+    });
+    console.log(passingRows);
+    if (passingRows === 9) {
+      return true; 
+    } else {
+      return false;
+      }
+  }
+
+  checkColumns() {
+    let passingColumns = 0;
+    for (let i = 0; i < 9; i++) {
+      var array =[];
+      Object.values(this).forEach(function(row) {
+        array.push(row[i]);
+        if (new Set(array).size === array.length) {
+          console.log(array)
+          passingColumns ++;
+        }
+      });
+      //console.log(array);
+    }
+    console.log(passingColumns);
+    if (passingColumns === 9) {
+      return true; 
+    } else {
+      return false;
+      }  
   }
 }
-
-
-
-const newSudoku = new Sudoku(row1, row2, )
-
-
-
-// class Sudoku {
-//   constructor(row1, row2, row3, row4, row5, row6, row7, row8, row9) {
-//     this.row1 = row1; [5, 3, null, null, 7, null, null, null, null]
-//     this.row2 = row2; [5, 3, null, null, 7, null, null, null, null]
-//     this.row3 = row3; [5, 3, null, null, 7, null, null, null, null]
-//     this.row4 = row4; [5, 3, null, null, 7, null, null, null, null]
-//     this.row5 = row5; [5, 3, null, null, 7, null, null, null, null]
-//     this.row6 = row6; [5, 3, null, null, 7, null, null, null, null]
-//     this.row7 = row7; [5, 3, null, null, 7, null, null, null, null]
-//     this.row8 = row8; [5, 3, null, null, 7, null, null, null, null]
-//     this.row9 = row9; [5, 3, null, null, 7, null, null, null, null]
-//   }
