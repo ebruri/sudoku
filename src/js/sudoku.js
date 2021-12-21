@@ -19,32 +19,36 @@ export default class Sudoku {
         passingRows ++;
       } 
     });
-    console.log(passingRows);
     if (passingRows === 9) {
       return true; 
     } else {
       return false;
-      }
+    }
   }
 
   checkColumns() {
     let passingColumns = 0;
-    for (let i = 0; i < 9; i++) {
+    let newArray = [];
+    for (let i = 0 ; i<9 ; i++){
       var array =[];
       Object.values(this).forEach(function(row) {
         array.push(row[i]);
-        if (new Set(array).size === array.length) {
-          console.log(array)
-          passingColumns ++;
-        }
       });
-      //console.log(array);
-    }
+      if (new Set(array).size === array.length) {
+        passingColumns ++; 
+      }
+      newArray.push(array);
+    } 
     console.log(passingColumns);
+    console.log(newArray);
     if (passingColumns === 9) {
       return true; 
     } else {
       return false;
-      }  
+    }  
   }
+}
+
+checkGrids() {
+  
 }
