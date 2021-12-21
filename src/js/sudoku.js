@@ -28,7 +28,6 @@ export default class Sudoku {
 
   checkColumns() {
     let passingColumns = 0;
-    let newArray = [];
     for (let i = 0 ; i<9 ; i++){
       var array =[];
       Object.values(this).forEach(function(row) {
@@ -37,18 +36,12 @@ export default class Sudoku {
       if (new Set(array).size === array.length) {
         passingColumns ++; 
       }
-      newArray.push(array);
     } 
     console.log(passingColumns);
-    console.log(newArray);
     if (passingColumns === 9) {
       return true; 
     } else {
       return false;
     }  
   }
-}
-
-checkGrids() {
-  
 }
